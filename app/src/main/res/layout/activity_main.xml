@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name_user_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_name"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:id="@+id/add_clinet_detail"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/form_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="Name : "
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="#969596"
+                    android:layout_height="40dp"/>
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:inputType="textCapCharacters"
+                    android:layout_height="40dp"
+                    android:id="@+id/ed_name"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="PAN No. : "
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="#969596"
+                    android:layout_height="40dp"/>
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:inputType="textCapCharacters"
+                    android:layout_height="40dp"
+                    android:id="@+id/ed_pan_no"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Adhar No. : "
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="#969596"
+                    android:layout_height="40dp"/>
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:layout_height="40dp"
+                    android:id="@+id/ed_adhar_no"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Mobile No. : "
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="#969596"
+                    android:layout_height="40dp"/>
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:layout_height="40dp"
+                    android:id="@+id/ed_mobile_no"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="Status : "
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="#969596"
+                    android:layout_height="40dp"/>
+                <Spinner
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:id="@+id/spinner_status"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="Date : "
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="#969596"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="40dp"
+                    android:id="@+id/tv_date_view"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="Remarks : "
+                    android:gravity="center_vertical"
+                    android:textColor="#000"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+
+                android:background="@drawable/editextbackground"
+                android:orientation="horizontal">
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:inputType="textMultiLine"
+                    android:layout_height="60dp"
+                    android:id="@+id/ed_remarks"/>
+            </LinearLayout>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    android:id="@+id/submit_btn_form"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:textColor="@color/white"/>
+            <LinearLayout
+                android:id="@+id/update_delete_layout_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/client_update_button"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:text="Update" />
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/client_delete_button"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:text="Delete" />
+            </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="100dp"/>
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/gridlinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SearchView
+            android:layout_margin="2dp"
+            android:background="@drawable/editextbackground"
+            android:focusable="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:id="@+id/searchautocompleteforclient"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search here"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="calibri"> </SearchView>
+
+
+            <GridView android:id="@+id/gridviewreport"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
+
+            </GridView>
+    </LinearLayout>
+
+</LinearLayout>
